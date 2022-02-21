@@ -23,5 +23,5 @@ public interface VehicleRepository extends JpaRepository<Vehicles, Long> {
             "INNER JOIN VehicleLocation vl ON v.id=vl.vehid " +
             "WHERE v.type" +
             "=:vehicleType AND vl.location =:location " )
-    List<VehicleLocationProjection> findVehicleByTypeAndLocation(@Param("vehicleType") VehicleType vehicleType, @Param("location") String location);
+    List<VehicleLocationProjection> findVehicleByTypeAndLocationIgnoreCase(@Param("vehicleType") VehicleType vehicleType, @Param("location") String location);
 }

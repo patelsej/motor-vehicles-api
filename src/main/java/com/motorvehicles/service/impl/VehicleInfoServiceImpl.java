@@ -31,10 +31,10 @@ public class VehicleInfoServiceImpl implements VehicleInfoService {
     @Override
     public VehicleInfoResposne findVehicleByTypeAndLocation(VehicleType vehicleType, String location) {
         log.info("Find vehicle by vehicle type and location");
-        List<VehicleLocationProjection> vehicleLocationProjections =  this.vehicleRepository.findVehicleByTypeAndLocation(vehicleType, location);
+        List<VehicleLocationProjection> vehicleLocationProjections =  this.vehicleRepository.findVehicleByTypeAndLocationIgnoreCase(vehicleType, location);
         return VehicleInfoResposne.builder()
                 .vehicleLocationProjections(vehicleLocationProjections)
-                .numberIfVehiclesPerLocation( vehicleLocationProjections != null ? vehicleLocationProjections.size() : 0 ).build();
+                .numberOfVehiclesPerLocation( vehicleLocationProjections != null ? vehicleLocationProjections.size() : 0 ).build();
     }
 
     @Override

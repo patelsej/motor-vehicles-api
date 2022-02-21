@@ -15,5 +15,5 @@ import java.util.List;
  */
 public class VehicleInfoResposne {
     private List<VehicleLocationProjection> vehicleLocationProjections;
-    private int numberIfVehiclesPerLocation;
+    private int numberOfVehiclesPerLocation;
 }
