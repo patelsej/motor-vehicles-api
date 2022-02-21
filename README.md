@@ -1,4 +1,4 @@
-# RESTful API that lists vehicles by location
+# Sprint boot API that lists vehicles by location
 This project built using **Java** and the following tools:
 - [Spring Boot](https://spring.io/projects/spring-boot) as server side framework
 - [Maven](https://maven.apache.org/) as build automation tool
